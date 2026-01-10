@@ -54,7 +54,7 @@ export default function About() {
                             <i className="fa-solid fa-graduation-cap text-3xl"></i>
                         </div>
                         <div>
-                            <h3 className="text-3xl font-bold text-white mb-2">IIIT Kota</h3>
+
                             <p className="text-gray-300 text-lg font-medium">Indian Institute of Information Technology, Kota</p>
                             <p className="text-gray-500 mt-1">Rajasthan, India</p>
                         </div>
