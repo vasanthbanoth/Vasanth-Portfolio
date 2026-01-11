@@ -9,6 +9,7 @@ export default function Navbar() {
             <ul className="flex gap-6 text-sm font-medium text-gray-400">
                 <li><a href="#home" className="hover:text-sawad-lime transition-colors">Home</a></li>
                 <li><a href="#about" className="hover:text-sawad-lime transition-colors">About</a></li>
+                <li><a href="#experience" className="hover:text-sawad-lime transition-colors">Experience</a></li>
                 <li><a href="#projects" className="hover:text-sawad-lime transition-colors">Work</a></li>
                 <li><a href="#contact" className="hover:text-sawad-lime transition-colors">Contact</a></li>
             </ul>

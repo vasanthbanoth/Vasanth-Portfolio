@@ -41,52 +41,34 @@ export default function About() {
     ];
 
     return (
-        <section id="about" className="py-20">
+        <section id="about" className="pt-20 pb-24">
             {/* Education Section */}
-            <div className="mb-16">
+            <div className="mb-0">
                 <h2 className="text-4xl lg:text-5xl font-bold mb-8 flex items-center gap-4">
                     <span className="w-4 h-4 rounded-full bg-cyan-400 animate-pulse"></span>
                     EDUCATION
                 </h2>
-                <div className="bg-sawad-card p-8 rounded-3xl border border-white/5 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 group hover:border-cyan-400/30 transition-colors duration-500">
-                    <div className="flex items-start gap-6">
-                        <div className="w-16 h-16 rounded-2xl bg-cyan-400/10 flex items-center justify-center text-cyan-400 shrink-0">
-                            <i className="fa-solid fa-graduation-cap text-3xl"></i>
+                <div className="bg-sawad-card p-6 rounded-3xl border border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 group hover:border-cyan-400/30 transition-colors duration-500">
+                    <div className="flex items-center gap-6">
+                        <div className="w-16 h-16 rounded-2xl bg-white p-2 flex items-center justify-center shrink-0">
+                            <img src="/images/iiit-kota-logo.png" alt="IIIT Kota" className="w-full h-full object-contain" />
                         </div>
                         <div>
-
+                            {/* Branch moved from here */}
                             <p className="text-gray-300 text-lg font-medium">Indian Institute of Information Technology, Kota</p>
-                            <p className="text-gray-500 mt-1">Rajasthan, India</p>
+                            <p className="text-gray-500 mt-1 text-sm">Rajasthan, India</p>
                         </div>
                     </div>
                     <div className="mt-2 md:mt-0">
+                        {/* Branch moved here */}
                         <div className="inline-block bg-white/5 px-6 py-3 rounded-full border border-white/10 group-hover:bg-white/10 transition-colors">
-                            <span className="text-gray-400 text-sm tracking-wider uppercase font-semibold mr-2">Branch</span>
-                            <span className="text-white font-bold text-lg">CSE</span>
+                            <span className="text-gray-400 text-xs tracking-wider uppercase font-semibold mr-2">Branch</span>
+                            <span className="text-white font-bold text-base">CSE</span>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <h2 className="text-4xl lg:text-5xl font-bold mb-12 flex items-center gap-4">
-                <span className="w-4 h-4 rounded-full bg-sawad-lime animate-pulse"></span>
-                TECHNICAL EXPERTISE
-            </h2>
-
-            <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                className="bg-sawad-card p-8 rounded-3xl border border-white/5"
-            >
-                <div className="flex flex-wrap gap-3">
-                    {customSkills.map((item, i) => (
-                        <div key={i} className="flex items-center gap-2 px-4 py-3 bg-white/5 rounded-xl border border-white/5 hover:bg-white/10 hover:scale-105 transition-all cursor-default">
-                            <i className={`${item.icon} text-xl mb-0.5`}></i>
-                            <span className="text-gray-200 font-medium">{item.name}</span>
-                        </div>
-                    ))}
-                </div>
-            </motion.div>
         </section>
     )
 }
