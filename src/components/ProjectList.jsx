@@ -62,12 +62,12 @@ export default function ProjectList() {
     ];
 
     return (
-        <section id="projects" className="py-20">
-            <h2 className="text-4xl lg:text-5xl font-bold mb-16 text-center">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">Projects</span>
+        <section id="projects" className="py-12 sm:py-16 lg:py-20">
+            <h2 className="mb-10 text-center text-3xl font-bold sm:mb-16 sm:text-4xl lg:text-5xl">
+                <span className="bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">Projects</span>
             </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 px-4 max-w-6xl mx-auto">
+            <div className="mx-auto grid max-w-6xl grid-cols-1 gap-5 px-0 sm:gap-8 sm:px-2 md:grid-cols-2">
                 {projects.map((project, index) => (
                     <motion.div
                         key={index}
@@ -77,7 +77,7 @@ export default function ProjectList() {
                         className="group relative rounded-3xl overflow-hidden bg-[#111] border border-white/10 hover:border-purple-500/50 transition-all duration-500 shadow-xl shadow-black h-full flex flex-col"
                     >
                         {/* Image Container */}
-                        <div className="relative h-64 overflow-hidden bg-black">
+                        <div className="relative h-48 overflow-hidden bg-black sm:h-64">
                             <div className="absolute inset-0 bg-gradient-to-t from-[#111] via-transparent to-transparent z-10"></div>
 
                             {/* Hover Scale Effect on Image */}
@@ -97,11 +97,11 @@ export default function ProjectList() {
                         </div>
 
                         {/* Content */}
-                        <div className="p-8 pt-2 flex flex-col flex-1 relative z-20">
-                            <div className="flex justify-between items-start mb-4">
-                                <div>
-                                    <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">{project.title}</h3>
-                                    <p className="text-sm text-gray-400 line-clamp-2">{project.desc}</p>
+                        <div className="relative z-20 flex flex-1 flex-col p-5 pt-2 sm:p-8 sm:pt-2">
+                            <div className="mb-4 flex items-start justify-between">
+                                <div className="min-w-0">
+                                    <h3 className="mb-2 text-xl font-bold text-white transition-colors group-hover:text-purple-400 sm:text-2xl">{project.title}</h3>
+                                    <p className="line-clamp-3 text-sm text-gray-400 sm:line-clamp-2">{project.desc}</p>
                                 </div>
                             </div>
 

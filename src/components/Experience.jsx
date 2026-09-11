@@ -70,12 +70,12 @@ export default function Experience() {
     ];
 
     return (
-        <section id="experience" className="py-24">
-            <h2 className="text-4xl lg:text-5xl font-bold mb-20 text-center">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">Experience</span>
+        <section id="experience" className="overflow-x-clip py-14 sm:py-20 lg:py-24">
+            <h2 className="mb-10 text-center text-3xl font-bold sm:mb-16 sm:text-4xl lg:mb-20 lg:text-5xl">
+                <span className="bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">Experience</span>
             </h2>
 
-            <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-12 pt-12">
+            <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-1 pt-8 sm:gap-12 sm:px-2 sm:pt-12 md:grid-cols-2 xl:grid-cols-3">
                 {experiences.map((exp, index) => (
                     <motion.div
                         key={index}
@@ -83,20 +83,20 @@ export default function Experience() {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ delay: index * 0.1, duration: 0.6 }}
                         whileHover={{ y: -8 }}
-                        className={`relative rounded-3xl p-8 pt-20 bg-gradient-to-br ${exp.color} border border-white/5 shadow-2xl group`}
+                        className={`group relative rounded-3xl border border-white/5 bg-gradient-to-br p-5 pt-16 shadow-2xl sm:p-8 sm:pt-20 ${exp.color}`}
                     >
                         {/* Ribbon Label */}
-                        <div className={`absolute top-8 left-0 ${exp.tagColor} text-white font-bold px-6 py-2 rounded-r-full shadow-lg z-20 text-sm tracking-wide`}>
+                        <div className={`absolute left-0 top-6 z-20 rounded-r-full px-4 py-2 text-xs font-bold tracking-wide text-white shadow-lg sm:top-8 sm:px-6 sm:text-sm ${exp.tagColor}`}>
                             {exp.company}
                         </div>
                         {/* Darker Triangle for Ribbon Effect */}
-                        <div className="absolute top-[52px] left-0 border-l-[10px] border-l-transparent border-t-[10px] border-t-black/40 skew-y-12"></div>
+                        <div className="absolute left-0 top-[44px] border-l-[10px] border-t-[10px] border-l-transparent border-t-black/40 skew-y-12 sm:top-[52px]"></div>
 
                         {/* Overhanging Logo */}
-                        <div className="absolute -top-12 -right-4 w-24 h-24 rounded-full bg-white p-1 shadow-[0_0_20px_rgba(0,0,0,0.3)] z-20 flex items-center justify-center border-[6px] border-[#050505] overflow-hidden">
-                            <div className="w-full h-full rounded-full overflow-hidden flex items-center justify-center bg-white">
+                        <div className="absolute -top-10 right-2 z-20 flex h-20 w-20 items-center justify-center overflow-hidden rounded-full border-[5px] border-[#050505] bg-white p-1 shadow-[0_0_20px_rgba(0,0,0,0.3)] sm:-top-12 sm:right-3 sm:h-24 sm:w-24 sm:border-[6px]">
+                            <div className="flex h-full w-full items-center justify-center overflow-hidden rounded-full bg-white">
                                 {exp.logo ? (
-                                    <img src={exp.logo} alt={exp.company} className="w-full h-full object-contain p-1" />
+                                    <img src={exp.logo} alt={exp.company} className="h-full w-full object-contain p-1" />
                                 ) : (
                                     <span className="text-3xl font-bold text-gray-800">{exp.company.charAt(0)}</span>
                                 )}
@@ -104,7 +104,7 @@ export default function Experience() {
                         </div>
 
                         <div className="mt-4">
-                            <h3 className="text-xl font-bold text-white mb-2 leading-tight min-h-[50px] flex items-end">{exp.role}</h3>
+                            <h3 className="mb-2 flex min-h-[48px] items-end text-lg font-bold leading-tight text-white sm:min-h-[50px] sm:text-xl">{exp.role}</h3>
                             <div className="text-xs text-blue-200 font-medium mb-4 flex items-center gap-2 font-mono">
                                 <i className="fa-regular fa-calendar" /> {exp.period}
                             </div>

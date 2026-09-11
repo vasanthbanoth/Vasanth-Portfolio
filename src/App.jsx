@@ -22,23 +22,22 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-web3-bg font-Outfit text-white selection:bg-sawad-lime selection:text-black">
+    <div className="min-h-screen overflow-x-hidden bg-web3-bg font-Outfit text-white selection:bg-sawad-lime selection:text-black">
       <AnimatePresence>
         {isLoading && <Preloader key="preloader" />}
       </AnimatePresence>
 
       {!isLoading && (
         <>
-          {/* Background Noise/Gradient - toned down for Sawad style */}
-          <div className="fixed inset-0 pointer-events-none opacity-50 -z-10 bg-[url('/images/noise.png')]"></div>
+          <div className="pointer-events-none fixed inset-0 -z-10 bg-[url('/images/noise.png')] opacity-50" />
 
-          <div className="max-w-screen-2xl mx-auto lg:flex">
-            {/* Sidebar - Sticky on Desktop */}
+          <div className="mx-auto max-w-screen-2xl lg:flex">
             <Sidebar />
 
-            {/* Main Content Area */}
-            <main className="flex-1 p-4 lg:ml-[400px]">
-              <div className="max-w-5xl mx-auto space-y-4">
+            <main
+              className="min-w-0 flex-1 px-3 pb-[max(1.25rem,env(safe-area-inset-bottom))] pt-3 sm:px-4 sm:pt-4 md:px-6 lg:ml-[360px] lg:px-6 xl:ml-[400px]"
+            >
+              <div className="mx-auto w-full max-w-5xl space-y-4">
                 <Navbar />
                 <BentoGrid />
                 <About />

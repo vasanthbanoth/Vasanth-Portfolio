@@ -27,18 +27,15 @@ const Contact = () => {
     };
 
     return (
-        <section id="contact" className="py-20 flex justify-center items-center">
-            {/* Reusing the 'Sawad' card style from the previous UI */}
-            <div className="w-full max-w-4xl bg-sawad-card rounded-3xl p-8 md:p-12 border border-white/5 flex flex-col items-center text-center relative overflow-hidden shadow-2xl">
+        <section id="contact" className="flex items-center justify-center py-12 sm:py-16 lg:py-20">
+            <div className="relative flex w-full max-w-4xl flex-col items-center overflow-hidden rounded-3xl border border-white/5 bg-sawad-card p-5 text-center shadow-2xl sm:p-8 md:p-12">
 
-                {/* Background Blob - Subtle Orange/Purple mix */}
-                <div className="absolute top-0 right-0 w-64 h-64 bg-sawad-orange/10 rounded-full blur-3xl -z-10"></div>
+                <div className="absolute right-0 top-0 -z-10 h-64 w-64 rounded-full bg-sawad-orange/10 blur-3xl"></div>
 
-                {/* Headers from 'Latest Text' with Orange Accent */}
-                <p className="text-sawad-orange text-lg font-medium mb-2 tracking-wide uppercase">Connect with me</p>
-                <h2 className="text-5xl md:text-6xl font-bold text-white mb-6 font-serif tracking-tight">Get in touch</h2>
+                <p className="mb-2 text-sm font-medium uppercase tracking-wide text-sawad-orange sm:text-lg">Connect with me</p>
+                <h2 className="mb-4 font-serif text-3xl font-bold tracking-tight text-white sm:mb-6 sm:text-5xl md:text-6xl">Get in touch</h2>
 
-                <p className="text-gray-400 max-w-2xl mb-10 text-lg leading-relaxed">
+                <p className="mb-8 max-w-2xl text-base leading-relaxed text-gray-400 sm:mb-10 sm:text-lg">
                     I'd love to hear from you! If you have any questions, comments or feedback, please use the form below.
                 </p>
 

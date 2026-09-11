@@ -41,30 +41,27 @@ export default function About() {
     ];
 
     return (
-        <section id="about" className="pt-20 pb-24">
-            {/* Education Section */}
+        <section id="about" className="pb-16 pt-12 sm:pb-20 sm:pt-16 lg:pb-24 lg:pt-20">
             <div className="mb-0">
-                <h2 className="text-4xl lg:text-5xl font-bold mb-8 flex items-center gap-4">
-                    <span className="w-4 h-4 rounded-full bg-cyan-400 animate-pulse"></span>
+                <h2 className="mb-6 flex items-center gap-3 text-3xl font-bold sm:mb-8 sm:gap-4 sm:text-4xl lg:text-5xl">
+                    <span className="h-3 w-3 shrink-0 animate-pulse rounded-full bg-cyan-400 sm:h-4 sm:w-4"></span>
                     EDUCATION
                 </h2>
-                <div className="bg-sawad-card p-6 rounded-3xl border border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 group hover:border-cyan-400/30 transition-colors duration-500">
-                    <div className="flex items-center gap-6">
-                        <div className="w-16 h-16 rounded-2xl bg-white p-2 flex items-center justify-center shrink-0">
-                            <img src="/images/iiit-kota-logo.png" alt="IIIT Kota" className="w-full h-full object-contain" />
+                <div className="group flex flex-col items-start justify-between gap-5 rounded-3xl border border-white/5 bg-sawad-card p-5 transition-colors duration-500 hover:border-cyan-400/30 sm:gap-6 sm:p-6 md:flex-row md:items-center">
+                    <div className="flex min-w-0 items-start gap-4 sm:items-center sm:gap-6">
+                        <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-white p-2 sm:h-16 sm:w-16">
+                            <img src="/images/iiit-kota-logo.png" alt="IIIT Kota" className="h-full w-full object-contain" />
                         </div>
-                        <div>
-                            {/* Branch moved from here */}
-                            <p className="text-gray-300 text-lg font-medium">Indian Institute of Information Technology, Kota</p>
-                            <p className="text-gray-500 mt-1 text-sm">B.Tech in Computer Science &amp; Engineering · Nov 2022 – May 2026</p>
-                            <p className="text-gray-500 mt-1 text-sm">Rajasthan, India</p>
+                        <div className="min-w-0">
+                            <p className="text-base font-medium text-gray-300 sm:text-lg">Indian Institute of Information Technology, Kota</p>
+                            <p className="mt-1 text-xs text-gray-500 sm:text-sm">B.Tech in Computer Science &amp; Engineering · Nov 2022 – May 2026</p>
+                            <p className="mt-1 text-xs text-gray-500 sm:text-sm">Rajasthan, India</p>
                         </div>
                     </div>
-                    <div className="mt-2 md:mt-0">
-                        {/* Branch moved here */}
-                        <div className="inline-block bg-white/5 px-6 py-3 rounded-full border border-white/10 group-hover:bg-white/10 transition-colors">
-                            <span className="text-gray-400 text-xs tracking-wider uppercase font-semibold mr-2">Branch</span>
-                            <span className="text-white font-bold text-base">CSE</span>
+                    <div className="w-full md:mt-0 md:w-auto">
+                        <div className="inline-block rounded-full border border-white/10 bg-white/5 px-5 py-2.5 transition-colors group-hover:bg-white/10 sm:px-6 sm:py-3">
+                            <span className="mr-2 text-xs font-semibold uppercase tracking-wider text-gray-400">Branch</span>
+                            <span className="text-base font-bold text-white">CSE</span>
                         </div>
                     </div>
                 </div>
