@@ -14,7 +14,7 @@ export default function BentoGrid() {
           <div className="absolute right-0 top-0 p-4 opacity-20 transition-opacity group-hover:opacity-100 sm:p-8">
             <img src="/images/code-icon-dark.png" className="h-14 w-14 invert sm:h-24 sm:w-24" alt="" aria-hidden />
           </div>
-          <h2 className="relative z-10 text-4xl font-black leading-[0.95] tracking-tighter text-white sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
+          <h2 className="relative z-10 break-words text-[clamp(2rem,10vw,5.5rem)] font-black leading-[0.95] tracking-tighter text-white">
             AI &amp;
             <br />
             SOFTWARE

@@ -59,8 +59,8 @@ export default function About() {
                         </div>
                     </div>
                     <div className="w-full md:mt-0 md:w-auto">
-                        <div className="inline-block rounded-full border border-white/10 bg-white/5 px-5 py-2.5 transition-colors group-hover:bg-white/10 sm:px-6 sm:py-3">
-                            <span className="mr-2 text-xs font-semibold uppercase tracking-wider text-gray-400">Branch</span>
+                        <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-2.5 transition-colors group-hover:bg-white/10 sm:px-6 sm:py-3">
+                            <span className="text-xs font-semibold uppercase tracking-wider text-gray-400">Branch</span>
                             <span className="text-base font-bold text-white">CSE</span>
                         </div>
                     </div>

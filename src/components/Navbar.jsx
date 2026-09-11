@@ -13,7 +13,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const onResize = () => {
-      if (window.innerWidth >= 768) setOpen(false);
+      if (window.innerWidth >= 1024) setOpen(false);
     };
     window.addEventListener('resize', onResize);
     return () => window.removeEventListener('resize', onResize);
@@ -36,7 +36,7 @@ export default function Navbar() {
           Vasanth.
         </a>
 
-        <ul className="hidden items-center gap-5 text-sm font-medium text-gray-400 md:flex lg:gap-6">
+        <ul className="hidden items-center gap-5 text-sm font-medium text-gray-400 lg:flex lg:gap-6">
           {links.map((l) => (
             <li key={l.href}>
               <a href={l.href} className="transition-colors hover:text-sawad-lime">
@@ -48,7 +48,7 @@ export default function Navbar() {
 
         <button
           type="button"
-          className="flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-white md:hidden"
+          className="flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-white lg:hidden"
           aria-label={open ? 'Close menu' : 'Open menu'}
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
@@ -58,7 +58,7 @@ export default function Navbar() {
       </div>
 
       {open && (
-        <div className="border-t border-white/10 px-4 py-3 md:hidden">
+        <div className="border-t border-white/10 px-4 py-3 lg:hidden">
           <ul className="flex flex-col gap-1">
             {links.map((l) => (
               <li key={l.href}>
